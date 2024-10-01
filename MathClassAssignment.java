@@ -36,11 +36,12 @@ public class MathClassAssignment {
         
         //use high real num value just generator to calculate Mass (in grams) needed
         //to generate that much energy using numer03 as the energy (E=mc^2)
-        System.out.print("\nPlease input an integer for length: \t"); 
+        System.out.print("\nPlease input an integer for decimal length: \t"); 
         int inputPlace = myObj.nextInt(); 
         int speedLight = 299792458;
         double massNum03 = num03/Math.pow(speedLight, 2);
-        System.out.println("Energy: "+num03+"  Mass: "+roundAvoid(massNum03, inputPlace));
+        System.out.println("Energy: "+num03+"  Mass: "+massNum03);
+        
         
         //use scanner to get real num as an integer from the user
         //return value of power of the integer using mathClass method
