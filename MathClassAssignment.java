@@ -7,6 +7,7 @@ public class MathClassAssignment {
     public static void main(String[] args) {
         //define "ran" variable as a random() object//
         Random ran = new Random();
+        Scanner myObj = new Scanner(System.in);
         
         //generate ran num between 0-99 including both sides
         //display sin, cos, and tan of num, display has to be rounded 3 decimal places
@@ -35,23 +36,27 @@ public class MathClassAssignment {
         
         //use high real num value just generator to calculate Mass (in grams) needed
         //to generate that much energy using numer03 as the energy (E=mc^2)
+        System.out.print("\nPlease input an integer for length: \t"); 
+        int inputPlace = myObj.nextInt(); 
         int speedLight = 299792458;
         double massNum03 = num03/Math.pow(speedLight, 2);
-        System.out.println("Energy: "+num03+"  Mass: "+massNum03);
+        System.out.println("Energy: "+num03+"  Mass: "+roundAvoid(massNum03, inputPlace));
         
         //use scanner to get real num as an integer from the user
         //return value of power of the integer using mathClass method
         //round value returned to integer the inputed
-        Scanner myObj = new Scanner(System.in);
         System.out.print("\nPlease input an integer: \t"); 
         int inputInt = myObj.nextInt(); 
         System.out.println(roundAvoid(Math.pow(inputInt, inputInt), inputInt));
-        
-        System.out.println("\n\n\tNumer 05: "+inputInt);
     }
     
     public static double roundAvoid(double value, int places){
         double scale = Math.pow(10, places);
         return Math.round(value * scale)/scale;
+    }
+    
+    public static double trigRound(int num, String func){
+        System.out.println("I work!");
+        return num;
     }
 }
